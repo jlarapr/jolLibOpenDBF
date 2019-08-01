@@ -1,8 +1,8 @@
 #include <windows.h>
 
 VS_VERSION_INFO VERSIONINFO
-	FILEVERSION 1,0,0,0
-	PRODUCTVERSION 1,0,0,0
+	FILEVERSION 1,0,0,1
+	PRODUCTVERSION 1,0,0,1
 	FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
 	FILEFLAGS VS_FF_DEBUG
@@ -19,11 +19,11 @@ VS_VERSION_INFO VERSIONINFO
 			BEGIN
 				VALUE "CompanyName", "libOpenDBF\0"
 				VALUE "FileDescription", "Lib Open DBF\0"
-				VALUE "FileVersion", "1.0.0.0\0"
+				VALUE "FileVersion", "1.0.0.1\0"
 				VALUE "LegalCopyright", "libOpenDBF\0"
 				VALUE "OriginalFilename", "jolLibOpenDBF1.dll\0"
 				VALUE "ProductName", "libOpenDBF\0"
-				VALUE "ProductVersion", "1.0.0.0\0"
+				VALUE "ProductVersion", "1.0.0.1\0"
 			END
 		END
 		BLOCK "VarFileInfo"

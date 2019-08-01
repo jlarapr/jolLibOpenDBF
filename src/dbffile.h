@@ -89,6 +89,11 @@ private:
     std::string& rtrim(std::string& str, const std::string& chars = "\t\n\v\f\r ");
     std::string& trim(std::string& str, const std::string& chars = "\t\n\v\f\r ");
 
+    template<class T>
+    int inline findAndReplace(T& source, const T& find, const T& replace);
+
+
+
 };
 
 

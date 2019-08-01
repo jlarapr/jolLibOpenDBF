@@ -220,7 +220,14 @@ void DbfFile_c::DumpAllAndCreateSqlFile(const char *szDestFileName,const char *s
             if (!starLoop)
                 outInsert.write(",'",2);
 
-            outInsert.write(&vecBuffer[0], record.uLength);
+            string strVecBuffer = &vecBuffer[0];
+
+            string strFind1 = "'";
+            string strFind2 = "''";
+
+            findAndReplace(strVecBuffer, strFind1, strFind2);
+
+            outInsert.write(strVecBuffer.c_str(), record.uLength);
             outInsert.write("'", 1);
 
             uTotalBytes += record.uLength;
@@ -372,4 +379,18 @@ string &DbfFile_c::rtrim(string &str, const string &chars)
 string &DbfFile_c::trim(string &str, const string &chars)
 {
     return ltrim(rtrim(str, chars), chars);
+}
+
+template<class T>
+int DbfFile_c::findAndReplace(T &source, const T &find, const T &replace)
+{
+    int num=0;
+    typename ::size_t fLen = find.size();
+    typename ::size_t rLen = replace.size();
+    for (::size_t pos=0; (pos=source.find(find, pos))!=T::npos; pos+=rLen)
+    {
+        num++;
+        source.replace(pos, fLen, replace);
+    }
+    return num;
 }
