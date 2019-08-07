@@ -5,3 +5,5 @@
 * Windows 10
 ## Original Source Code
 * https://github.com/bcsanches/dbf2txt
+## Change
+* Dynamic to Static lib

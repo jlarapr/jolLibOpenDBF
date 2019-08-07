@@ -2,7 +2,8 @@
 # https://github.com/bcsanches/dbf2txt
 
 TEMPLATE = lib
-CONFIG += dll
+# CONFIG += dll
+CONFIG += staticlib
 CONFIG += console c++17
 CONFIG -= app_bundle
 CONFIG -= qt
