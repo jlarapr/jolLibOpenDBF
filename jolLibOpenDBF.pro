@@ -57,7 +57,8 @@ MAKEFILE = $$DESTDIR/$$MyMakefile
 TARGET = $$DEPLOY_TARGET
 
 SOURCES += \
-        src/dbffile.cpp
+        src/dbffile.cpp \
+        tmp.cpp
 
 HEADERS += \
     src/dbffile.h
